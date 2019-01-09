@@ -22137,14 +22137,25 @@ var Cart = function (_React$Component) {
       }
     }
   }, {
-    key: 'renderDelivery',
-    value: function renderDelivery() {
+    key: 'Delivery',
+    value: function Delivery() {
+
       // if(this.props.totalAmount <= '50'){
       //   return "3.95";
       // } else {
       //   return "7.95";
       // } 
-      // return "For orders under £50 delivery costs £4.95. For orders under £90, delivery costs £2.95. Orders over £90 have free delivery.";
+      // if(this.props.totalAmount <= '90'){
+      //   const deliveryCharge = '2.95';
+      // } else if(this.props.totalAmount <= '50') {
+      //   const deliveryCharge = '4.95';
+      // } else if(this.props.totalAmount >= '90') {
+      //   const deliveryCharge = '0.00';
+      // }else{
+      //   const deliveryCharge = '0.00';
+      // }
+
+      return "For orders under £50 delivery costs £4.95. For orders under £90, delivery costs £2.95. Orders over £90 have free delivery.";
     }
   }, {
     key: 'renderEmpty',
@@ -22154,6 +22165,7 @@ var Cart = function (_React$Component) {
   }, {
     key: 'renderCart',
     value: function renderCart() {
+
       var cartItemsList = this.props.cart.map(function (cartArr) {
         return _react2.default.createElement(
           _reactBootstrap.Panel,
@@ -22262,8 +22274,7 @@ var Cart = function (_React$Component) {
                 _react2.default.createElement(
                   'h6',
                   null,
-                  'Delivery charge:',
-                  this.props.renderDelivery
+                  'Delivery charge:TBC'
                 ),
                 _react2.default.createElement(
                   _reactBootstrap.Button,
@@ -49627,16 +49638,21 @@ var BooksList = function (_React$Component) {
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { md: 12 },
-            _react2.default.createElement(_BooksForm2.default, null)
-          )
+          booksList
         ),
         _react2.default.createElement(
           _reactBootstrap.Row,
           null,
-          booksList
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 12 },
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Add new products to test cart (ps. Just to illustrate admin functions)'
+            ),
+            _react2.default.createElement(_BooksForm2.default, null)
+          )
         )
       );
     }

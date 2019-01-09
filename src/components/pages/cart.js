@@ -65,13 +65,24 @@ class Cart extends React.Component{
     } 
   }
 
-  renderDelivery(){
+  Delivery(){
+  
     // if(this.props.totalAmount <= '50'){
     //   return "3.95";
     // } else {
     //   return "7.95";
     // } 
-    // return "For orders under £50 delivery costs £4.95. For orders under £90, delivery costs £2.95. Orders over £90 have free delivery.";
+    // if(this.props.totalAmount <= '90'){
+    //   const deliveryCharge = '2.95';
+    // } else if(this.props.totalAmount <= '50') {
+    //   const deliveryCharge = '4.95';
+    // } else if(this.props.totalAmount >= '90') {
+    //   const deliveryCharge = '0.00';
+    // }else{
+    //   const deliveryCharge = '0.00';
+    // }
+
+    return "For orders under £50 delivery costs £4.95. For orders under £90, delivery costs £2.95. Orders over £90 have free delivery.";
   }
 
     renderEmpty(){
@@ -81,6 +92,10 @@ class Cart extends React.Component{
     }
 
     renderCart(){
+
+     
+
+
     const cartItemsList =
         this.props.cart.map(function(cartArr){
           return(
@@ -125,7 +140,7 @@ class Cart extends React.Component{
                 <Col xs={12}>
                     <h6>Total amount:&pound;{this.props.totalAmount}</h6>
                     <h6>Total count of products in cart:{this.props.totalQty}</h6>
-                    <h6>Delivery charge:{this.props.renderDelivery}</h6>
+                    <h6>Delivery charge:TBC</h6>
                     
                     <Button onClick={this.open.bind(this)} bsStyle="success" bsSize="small">
                       PROCEED TO CHECKOUT

@@ -45,14 +45,17 @@ class BooksList extends React.Component{
                       <Cart />
                     </Row>
  
-                    <Row>
-                      <Col md={12} >
-                        <BooksForm />
-                      </Col>
-                    </Row>
+             
                     <Row>
                       {booksList}
                     </Row>
+
+                    <Row>
+                      <Col md={12} >
+                      <h3>Add new products to test cart (ps. Just to illustrate admin functions)</h3>
+                        <BooksForm />
+                      </Col>
+                    </Row> 
 
                   </Grid>
                   )
