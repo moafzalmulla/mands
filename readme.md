@@ -1,3 +1,4 @@
+
 M & S requirements : 
 The M&S Venture Lab have decided to open a hyper-focused online shop that sells only three
 things - jeans, blouses, and socks. Each product has a corresponding product code and price:
@@ -26,3 +27,10 @@ S01, B01 £37.85
 J01, J01 £54.37
 J01, B01 £60.85
 S01, S01, J01, J01, J01 £98.27
+
+Setup : 
+
+1) Clone repo
+2) run 'npm install'
+3) run 'node server.js'
+4) Open http://localhost:3000/  in your Browser
