@@ -1,0 +1,28 @@
+body{
+    margin: 50px;
+}
+
+.container{
+    width : auto;
+    max-width: 900px;
+    padding : 0 15px;
+}
+
+.container .footer-text{
+    margin: 20px 0;
+}
+
+.badge{
+    background-color: #e4aa48;
+}
+
+.footer{
+    background-color: #101010;
+    padding:20px;
+    color:white;
+    height:50px;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width:100%;
+}
