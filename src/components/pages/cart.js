@@ -65,6 +65,15 @@ class Cart extends React.Component{
     } 
   }
 
+  renderDelivery(){
+    // if(this.props.totalAmount <= '50'){
+    //   return "3.95";
+    // } else {
+    //   return "7.95";
+    // } 
+    // return "For orders under £50 delivery costs £4.95. For orders under £90, delivery costs £2.95. Orders over £90 have free delivery.";
+  }
+
     renderEmpty(){
     return(<div>
       {/* Cart Empty */}
@@ -85,7 +94,7 @@ class Cart extends React.Component{
               </Col>
 
               <Col xs={12} sm={2}>
-                <h6>usd. {cartArr.price}</h6>
+                <h6>&pound; {cartArr.price}</h6>
               </Col>
 
               <Col xs={12} sm={2}>
@@ -114,8 +123,10 @@ class Cart extends React.Component{
             {cartItemsList}
             <Row>
                 <Col xs={12}>
-                    <h6>Total amount:£{this.props.totalAmount}</h6>
+                    <h6>Total amount:&pound;{this.props.totalAmount}</h6>
                     <h6>Total count of products in cart:{this.props.totalQty}</h6>
+                    <h6>Delivery charge:{this.props.renderDelivery}</h6>
+                    
                     <Button onClick={this.open.bind(this)} bsStyle="success" bsSize="small">
                       PROCEED TO CHECKOUT
                     </Button>
@@ -136,7 +147,7 @@ class Cart extends React.Component{
 
                           <Modal.Footer>
                             <Col xs={6}>
-                            <h6>total £{this.props.totalAmount}</h6>
+                            <h6>total &pound;{this.props.totalAmount}</h6>
                             </Col>
                           <Button onClick={this.close.bind(this)}>Close</Button>
                           </Modal.Footer>

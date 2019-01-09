@@ -7,7 +7,7 @@
         return(
           <Navbar inverse fixedTop>
                 <Navbar.Header>
-                    <Navbar.Brand><a href="/">React-Bootstrap</a></Navbar.Brand>
+                    <Navbar.Brand><a href="/">M and S</a></Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>

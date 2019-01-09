@@ -20,16 +20,15 @@ class BooksList extends React.Component{
 
                 const booksList = this.props.books.map(function(booksArr){
                   return(
-                    
-                    <Col xs={12} sm={6} md={4}
-                    key={booksArr._id}>
-                    
-                    <BookItem
-                    _id = {booksArr._id}
-                    title ={booksArr.title}
-                    description ={booksArr.description}
-                    price ={booksArr.price}/>
-                    </Col>
+                      <Col md={4}
+                      key={booksArr._id}>
+                        <BookItem
+                        _id = {booksArr._id}
+                        title ={booksArr.title}
+                        description ={booksArr.description}
+                        price ={booksArr.price}/> 
+                      </Col>
+
                   )
                 })
 
@@ -47,11 +46,14 @@ class BooksList extends React.Component{
                     </Row>
  
                     <Row>
-                      <Col xs={12} sm={6}>
+                      <Col md={12} >
                         <BooksForm />
                       </Col>
-                        {booksList}
                     </Row>
+                    <Row>
+                      {booksList}
+                    </Row>
+
                   </Grid>
                   )
     } 

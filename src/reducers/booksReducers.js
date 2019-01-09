@@ -3,21 +3,24 @@
 export function booksReducers (state={books:[
         {
         _id: 1,
-        title:'Student One',
-        description: 'this is the book description',
-            price: 33.33
+        title:'Jeans',
+        description: 'Skinny jeans are an essential item in the wardrobe of any modern man, and this style lets you nail the trend without feeling restricted. These stretch jeans for men work to keep you feeling more comfortable throughout the day, whether you’re travelling or taking on a busy weekend.',
+            price: 32.95,
+            code: 'J01'
         },
         {
             _id: 2,
-            title:'Student two',
-            description: 'this is the second book description',
-            price: 50
+            title:'Blouse',
+            description: 'Our high neck blouse features a button fastening at the back of the neck and contrast cuffs and is cut in a flattering fit that drapes elegantly on the body.',
+            price: 24.95,
+            code: 'B01'
         },
         {
         _id: 3,
-        title:'Student three',
-        description: 'this is the third book description',
-        price: 150
+        title:'Socks',
+        description: 'Keeping you cool and fresh throughout the day, these essential men’s socks boast antibacterial and moisture wicking properties to keep sweat and unwanted odours away. The multipack of men’s socks are a must have for stocking up your sock drawer with their comfortable, soft cotton rich composition and simple design.',
+        price: 7.95,
+        code: 'S01'
         }
 ]},action){
         switch(action.type){

@@ -40,7 +40,7 @@ class BooksForm extends React.Component{
 
 
     return(
-        <Well>
+        <Well xs={12}>
                 <FormGroup controlId="title">
                     <ControlLabel>Title</ControlLabel>
                         <FormControl type="text" placeholder="Enter Title" ref="title" />
@@ -54,18 +54,18 @@ class BooksForm extends React.Component{
                         <FormControl type="text" placeholder="Enter Price" ref="price" />
                 </FormGroup>
 
-                <Button onClick={this.handleSubmit.bind(this)} bsStyle="primary">Save book</Button>
+                <Button onClick={this.handleSubmit.bind(this)} bsStyle="primary">Save Item</Button>
        
 
                     <FormGroup controlId="formControlsSelect">
-                    <ControlLabel>Select a book id to delete</ControlLabel>
+                    <ControlLabel>Select a Item to delete</ControlLabel>
                     <FormControl ref="delete" componentClass="select" placeholder="select">
                         <option value="select">select</option>
                         {booksList}
                     </FormControl>
                     </FormGroup>
 
-                <Button onClick={this.onDelete.bind(this)} bsStyle="danger">Delete book</Button>
+                <Button onClick={this.onDelete.bind(this)} bsStyle="danger">Delete Item</Button>
                     
 
         </Well>
